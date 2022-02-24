@@ -1,6 +1,6 @@
-# Overmind
-
 ![logo](./img/logo-name.png)
+
+</br></br>
 
 Overmind strives to bring high quality observability to everything in your infrastructure, *even if you don't know it's there.*
 
