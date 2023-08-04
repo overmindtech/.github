@@ -2,13 +2,20 @@
 
 </br></br>
 
-Overmind strives to bring high quality observability to everything in your infrastructure, *even if you don't know it's there.*
+## Overmind: Terraform Impact Analysis
 
-* [x] Understands relationships automatically
-* [x] Supports gathering data from:
-    * ☁️ Cloud providers
-    * 📦 Container orchestration
-    * 🏢 Server OSes
-    * 🛠 Anything else, through open-source plugin ecosystem
+Overmind gives you confidence to move faster with Terraform no matter how large, complex, old, manually created, inconsistent or otherwsie scary your environment is!
 
-**Watch this space for more information**
+## Blast Radius
+
+Use our [GitHub action](https://github.com/overmindtech/actions) to go from **Terraform Plan --> Blast Radius**. The blast radius is based on your live AWS/Kubernetes state, not Terraform, which lets you see what might break:
+
+* Includes **resources not managed by Terraform**
+* Discovers dependencies **even if they were created manually**
+* Shows *live data*, not out-of-date CMDB data
+
+## Impact Analysis (diff)
+
+Once you've decided to apply your changes, track them with Overmind. SInce we've already worked out all the dependencies, we can tell you if you changes has broken something downstream, even if you didn't know it existed.
+
+![](https://uploads-ssl.webflow.com/6241e92445c21f56c545a94a/6477620bc6c3beb25c2f0e65_Blast%20Radius.png)
