@@ -14,8 +14,10 @@ Use our [GitHub action](https://github.com/overmindtech/actions) to go from **Te
 * Discovers dependencies **even if they were created manually**
 * Shows *live data*, not out-of-date CMDB data
 
+![blast radius](./img/blast_radius.png)
+
 ## Impact Analysis (diff)
 
 Once you've decided to apply your changes, track them with Overmind. SInce we've already worked out all the dependencies, we can tell you if you changes has broken something downstream, even if you didn't know it existed.
 
-![](https://uploads-ssl.webflow.com/6241e92445c21f56c545a94a/6477620bc6c3beb25c2f0e65_Blast%20Radius.png)
+![blast radius diff](./img/blast_radius_diff.png)
