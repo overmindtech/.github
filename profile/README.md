@@ -4,7 +4,7 @@
 
 ## Overmind: Terraform Impact Analysis
 
-Overmind gives you confidence to move faster with Terraform no matter how large, complex, old, manually created, inconsistent or otherwsie scary your environment is!
+Overmind gives you the confidence to move faster with Terraform no matter how large, complex, old, manually created, inconsistent, or otherwise scary your environment is!
 
 ## Blast Radius
 
@@ -18,6 +18,6 @@ Use our [GitHub action](https://github.com/overmindtech/actions) to go from **Te
 
 ## Impact Analysis (diff)
 
-Once you've decided to apply your changes, track them with Overmind. SInce we've already worked out all the dependencies, we can tell you if you changes has broken something downstream, even if you didn't know it existed.
+Once you've decided to apply your changes, track them with Overmind. Since we've already worked out all the dependencies, we can tell you if your changes has broken something downstream, even if you didn't know it existed.
 
 ![blast radius diff](./img/blast_radius_diff.png)
