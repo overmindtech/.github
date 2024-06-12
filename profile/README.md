@@ -15,7 +15,7 @@
 
 # What is Overmind?
 
-Overmind is a powerful tool for real-time impact analysis on Terraform changes. Overmind can **identify the blast radius** and **uncover potential risks** before they harm your infrastructure, allowing anyone to make changes with confidence. We also track the impacts of the changes you make e so that you can be sure that your changes haven't had any unexpected downstream impact.
+Overmind is a powerful tool for real-time impact analysis on Terraform changes. Overmind can **identify the blast radius** and **uncover potential risks** before they harm your infrastructure, allowing anyone to make changes with confidence. We also track the impacts of the changes you make so that you can be sure that your changes haven't had any unexpected downstream impact.
 
 ## Why Use Overmind?
 
@@ -53,7 +53,7 @@ overmind terraform plan
 ```
 [Install on other platforms](https://github.com/overmindtech/cli/)
 
-We alos support integration with our [Github Action](https://github.com/overmindtech/terraform-example)
+We also support integration with our [Github Action](https://github.com/overmindtech/terraform-example)
 
 ![Running 'overmind terraform plan' and viewing in the app](https://uploads-ssl.webflow.com/6241e92445c21f9c1245a940/666039f90a7a42bebcfaf692_overmind_cli_demo%20(1).gif)
 
