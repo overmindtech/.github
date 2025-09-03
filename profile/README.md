@@ -10,64 +10,140 @@
 </p>
 
 <p align="center">
-  <a href="https://vimeo.com/903381683">🎥 Watch a demo</a> | <a href="https://docs.overmind.tech">📖 Docs</a> | <a href="https://app.overmind.tech/api/auth/signup">🚀 Sign up</a> | <a href="https://app.overmind.tech/playground">💻 Playground</a> | <a href="https://www.linkedin.com/company/overmindtech/">🙌 Follow us</a>
+  <a href="https://overmind.tech"> 💻  Website</a> | <a href="https://docs.overmind.tech">📖 Docs</a> | <a href="https://app.overmind.tech/api/auth/signup">🚀 Sign up</a> | <a href="https://www.linkedin.com/company/overmindtech/">🙌 Follow us</a>
 </p>
 
 # What is Overmind?
 
-Overmind is a powerful tool for real-time impact analysis on Terraform changes. Overmind can **identify the blast radius** and **uncover potential risks** before they harm your infrastructure, allowing anyone to make changes with confidence. We also track the impacts of the changes you make so that you can be sure that your changes haven't had any unexpected downstream impact.
+Overmind helps you deploy infrastructure changes with confidence by simulating their impact before they go live. We analyze your Terraform plans against real-time dependency data from AWS, GCP, and Kubernetes to show you exactly what could be affected by your changes — giving you full visibility into blast radius, risks, and expected outcomes without changing your existing tools or workflows.
 
-## Why Use Overmind?
+## The Problem
 
-* **☁️ Cloud Complexity:** Terraform tells you what it's going to change, but not whether this change will break everything. Teams need to understand dependencies to properly understand impact.
-* **👨‍🏫 Onboarding & Productivity:** Due to the reliance on "tribal knowledge", expert staff are stuck doing approvals rather than productive work and newer staff take longer to become productive.
-* **📋 Change Management Process:** IaC and automation mean that changes spend substantially more time in review and approval steps than the change itself actually takes.
-* **🔥 Downtime:** Outages are not caused by simple cause-and-effect relationships. More often than not, downtime is a result of dependencies people didn't know existed.
+Developers spend 15–20% of their time on code reviews — and up to 30% of those are for routine or minor changes. Teams face this dilemma: react when it matters or get bogged down reviewing every single change without context.
 
-## How We Solve It?
+Hidden dependencies across AWS, GCP, and Kubernetes environments create invisible blast radius that only becomes apparent when something breaks. Critical services might depend on that "simple" change in ways that aren't visible in your `.tf` files.
+
+## How Overmind Solves It
+
 <table style="width: 100%; table-layout: fixed;">
   <tr>
     <td style="width: 50%; vertical-align: top;">
       <img width="100%" src="https://uploads-ssl.webflow.com/6241e92445c21f9c1245a940/66607bb64e562f2d332dad8b_blast_radius.png" /><br/>
-        <b>🔍 Blast Radius: </b>Overmind maps out all potential dependencies and interactions within your infra in realtime. Supports over 120 AWS resources and all Kubernetes.
+        <b>🔍 Blast Radius Analysis:</b> Your mapped cloud resources and their connections help you understand pre and post deployment impact across 120+ AWS resources, GCP services, and all Kubernetes objects.
     </td>
-    <td style="width: 50%; vertical-align: top;">
+    <td style="width:50%; vertical-align: top;">
       <img width="100%" src="https://uploads-ssl.webflow.com/6241e92445c21f9c1245a940/66607454e2bf59158c49565a_health%20check%20risk.png" /><br/>
-      <b>🚨 Risks: </b>Discover specific risks that would be invisible otherwise. Risks are delivered directly to the pull request. Make deployment decisions within minutes not hours.
+      <b>🚨 Risk Assessment:</b> See the real impact of every change with LLM-powered analysis that delivers clear, actionable risk assessments straight to your pull requests.
     </td>
   </tr>
 </table>
 
-# Quick Start
+### 🎯 Signals: Follow data-driven Signals, not gut feelings
 
-Install the Overmind CLI using brew:
+Let strong signals guide your reviews — **positive signals speed up PR approvals with confidence, while negative signals trigger deeper checks to mitigate potential risks**.
 
-```
+- **Democratize tribal knowledge**: Centralize organizational context that typically lives within a team's collective memory
+- **Closes the loop**: Learns from previous changes to improve predictions
+- **Find the needle in the haystack**: Even in the largest of changes
+
+<p>
+
+# Getting Started
+
+## 5-minute setup
+
+Get started in minutes — no workflow changes required. Free forever for one repository with full feature access, no time limits, no credit card required.
+
+## Quick Start
+
+Install the Overmind CLI:
+
+```bash
 brew install overmindtech/overmind/overmind-cli
 ```
 
-Run a terraform plan:
+Analyze your changes:
 
-```
+```bash
 overmind terraform plan
 ```
+
 [Install on other platforms](https://github.com/overmindtech/cli/)
 
-We also support integration with our [Github Action](https://github.com/overmindtech/terraform-example)
-
 ![Running 'overmind terraform plan' and viewing in the app](https://uploads-ssl.webflow.com/6241e92445c21f9c1245a940/666039f90a7a42bebcfaf692_overmind_cli_demo%20(1).gif)
+
+## React when it matters, directly from the PR
+
+Overmind alerts you only when it counts. See Signals, Risks, and expected changes directly in your pull requests as clear, actionable comments with our [GitHub Action](https://github.com/overmindtech/terraform-example):
+
+```yaml
+- uses: overmindtech/actions/submit-plan@main
+  with:
+    ovm-api-key: ${{ secrets.OVM_API_KEY }}
+    plan-json: ./tfplan.json
+```
+
+## Deploy with confidence across all teams & workflows
+
+- **AWS**: Secure access through customer-managed IAM roles with minimal read-only permissions
+- **GCP**: Dedicated service accounts with granular, read-only IAM roles following least privilege
+- **Kubernetes**: Complete cluster resource discovery and relationship mapping
+- **Azure**: Managed identity with read-only permissions scoped to your resources
+
+## Key Features
+
+### Auto-tagging
+Automatically categorize infrastructure changes to ensure consistent change management, enforce compliance, and streamline reviews for every modification.
+
+### Risks
+Evaluate potential failure points, spot configuration issues, and get recommendations for safe deployment with human-readable explanations.
+
+### Signals
+Routine changes get positive signals that accelerate approvals. Complex changes get negative signals that trigger deeper review processes.
+
+## What Our Customers Say
+
+> "Overmind has revolutionized our IaC change management. It excels in risk evaluation, preventing issues before they arise. Fewer delays and less scrambling to fix things last minute."
+> 
+> **Tobias McCurry, Global Security @Whiskerlabs**
+
+> "Overmind not only simplifies risk assessment, it democratises it, enabling even your newest team members to confidently deploy changes faster."
+> 
+> **Nigel Kersten, Chief Product Officer @Platform.sh**
+
+## Security, Privacy, and Compliance built in
+
+- Information Security Management System audit in progress
+- Service Organization Controls audit in progress  
+- Secure, read-only access with principle of least privilege
+- All operations logged and auditable
+
+## Enterprise Ready
+
+When you're ready to scale beyond one repository:
+
+- **Unlimited repositories and users**
+- **SSO and enterprise security** 
+- **24/7 priority support**
+- **On-premise deployment options**
+- **Custom integrations**
+
+## Prevent outages before they cost you customers
+
+Contact [sales@overmind.tech](mailto:sales@overmind.tech) for enterprise pricing or [schedule a live demo](https://overmind.tech/demo) with our team today.
 
 ## Join the Community
 
 - Join our [Discord](https://discord.com/invite/5UKsqAkPWG)
-- Contact us via email at [sales@overmind.tech](mailto:sales@overmind.tech)
+- Contact us via email at [sales@overmind.tech](mailto:hello@overmind.tech)  
 - Follow us on [LinkedIn](https://www.linkedin.com/company/overmindtech/)
 
 ## Additional Resources
 
 - [Documentation](https://docs.overmind.tech)
-- [Playground](https://app.overmind.tech/playground)
-- [Getting Started Guide](https://docs.overmind.tech)
+- [Getting Started Guide](https://docs.overmind.tech/getting-started/quickstart)
 - [Overmind Blog](https://overmind.tech/blog)
+
+---
 
 Overmind is made with ❤️ in 🇺🇸🇬🇧🇦🇹🇫🇷🇷🇴
